@@ -8,8 +8,8 @@ def run():
     NyanEngine.add_keyword("힛", breakpoint_handler)
     match sys.argv:
         case [_, _, f]:
-            print(f)
-            NyanEngine(f, debug=True).run()
+            ne = NyanEngine(f, debug=True)
+            ne.run()
 
 def breakpoint_handler():
     dest = time.time() + 5
